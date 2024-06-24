@@ -3,10 +3,10 @@ name = "duplosentido"
 version = "0.1.0"
 authors = ["Miguel Taciano <contact@mtaciano.com>"]
 edition = "2021"
-description = "A crate for interacting with a DualSense controller"
-repository = "https://github.com/mtaciano/duplosenso"
+description = "A crate for easy interactions with the DualSense (PS5) controller"
+repository = "https://github.com/mtaciano/duplosentido"
 license = "MIT"
-publish = false # While it is not complete.
+publish = false # While it isn't complete.
 
 [build-dependencies]
 pkg-config = "0.3.30"

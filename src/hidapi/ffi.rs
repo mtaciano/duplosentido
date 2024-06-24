@@ -4,10 +4,12 @@ use std::marker::{PhantomData, PhantomPinned};
 #[repr(C)]
 #[allow(non_camel_case_types)]
 pub(super) struct hid_device {
+    // Opaque type.
     _data: [u8; 0],
     _marker: PhantomData<(*mut u8, PhantomPinned)>,
 }
 
+// All documentation extracted directly from the HIDAPI source code.
 extern "C" {
     /// @brief Open a HID device using a Vendor ID (VID), Product ID (PID) and optionally a
     /// serial number.

@@ -1,5 +1,10 @@
 extern crate pkg_config;
 
 fn main() {
-    pkg_config::probe_library("hidapi-hidraw").expect("Could not find hidapi-hidraw");
+    let pkg = pkg_config::Config::new();
+
+    if pkg.probe("hidapi-hidraw").is_err() {
+        pkg.probe("hidapi-libusb")
+            .expect("Either hidraw or libusb backends should be present");
+    };
 }
